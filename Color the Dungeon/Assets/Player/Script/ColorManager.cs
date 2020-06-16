@@ -5,21 +5,17 @@ using UnityEngine.InputSystem;
 
 public class ColorManager : MonoBehaviour
 {
-    SpriteRenderer spriteRenderer;
-    Color currentColor = Color.black;
+    public SpriteRenderer colored_part;
+    public Color currentColor = Color.black;
     PlayerInteractor pInteractor;
     // Start is called before the first frame update
     void Start()
     {
         pInteractor = GetComponent<PlayerInteractor>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.color = new Color(0.83f, 0.83f, 0.83f, 1f);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (currentColor == Color.black)
+            colored_part.color = new Color(0.83f, 0.83f, 0.83f, 1f);
+        else
+            colored_part.color = currentColor;
     }
 
     public void ColorSelf(InputAction.CallbackContext context)
@@ -35,13 +31,19 @@ public class ColorManager : MonoBehaviour
                 if (entity.gameObject.layer == LayerMask.NameToLayer("Fountain") && entityPainter)
                 {
                     if (entityPainter.color == Color.black)
-                        currentColor = new Color(0.83f, 0.83f, 0.83f, 1f);
-                    else 
+                        currentColor = Color.black;
+                    else
                         currentColor += entityPainter.color;
                 }
             }
         }
 
-        spriteRenderer.color = currentColor;
+        if (currentColor == Color.black)
+            colored_part.color = new Color(0.83f, 0.83f, 0.83f, 1f);
+        else
+        {
+            currentColor = new Color(Mathf.Min(currentColor.r, 1f), Mathf.Min(currentColor.g, 1f), Mathf.Min(currentColor.b, 1f), Mathf.Min(currentColor.a, 1f));
+            colored_part.color = currentColor;
+        }
     }
 }
