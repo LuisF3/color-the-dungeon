@@ -13,7 +13,7 @@ public class ColorManager : MonoBehaviour
     {
         pInteractor = GetComponent<PlayerInteractor>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.color = currentColor;
+        spriteRenderer.color = new Color(0.83f, 0.83f, 0.83f, 1f);
     }
 
     // Update is called once per frame
@@ -35,7 +35,7 @@ public class ColorManager : MonoBehaviour
                 if (entity.gameObject.layer == LayerMask.NameToLayer("Fountain") && entityPainter)
                 {
                     if (entityPainter.color == Color.black)
-                        currentColor = Color.black;
+                        currentColor = new Color(0.83f, 0.83f, 0.83f, 1f);
                     else 
                         currentColor += entityPainter.color;
                 }

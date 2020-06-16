@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Painter : MonoBehaviour
 {
-    SpriteRenderer spriteRenderer;
+    [SerializeField] SpriteRenderer colored_part;
     public Color color = Color.black;
 
     private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.color = color;
+        if (color == Color.black)
+            colored_part.color = new Color(0.54f, 0.8f, 0.94f, 1f);
+        else 
+            colored_part.color = color;
     }
 }
