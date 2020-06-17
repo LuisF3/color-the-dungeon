@@ -26,8 +26,6 @@ public class Barrier : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(color);
-        Debug.Log(player_colorManager.currentColor);
         if ((player_transform.position - transform.position).sqrMagnitude < openRange * openRange && player_colorManager.currentColor == color)
             open = true;
         else 

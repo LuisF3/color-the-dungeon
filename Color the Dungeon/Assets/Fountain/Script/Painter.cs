@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Painter : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer colored_part;
+    public SpriteRenderer colored_part;
     public Color color = Color.black;
 
     private void Start()
