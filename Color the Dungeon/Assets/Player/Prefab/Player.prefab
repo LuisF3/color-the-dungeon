@@ -130,7 +130,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 7388399842426930641, guid: fd2687010ebbe0242b2f0f802d5392e4,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -222,7 +222,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 4334783836991956000, guid: fd2687010ebbe0242b2f0f802d5392e4,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -422,12 +422,12 @@ PrefabInstance:
     - target: {fileID: 1797601009600575329, guid: 94d3599e160fb6e4296fe22c72e07d02,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.996
+      value: 0.566
       objectReference: {fileID: 0}
     - target: {fileID: 1797601009600575329, guid: 94d3599e160fb6e4296fe22c72e07d02,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.254
       objectReference: {fileID: 0}
     - target: {fileID: 1797601009600575329, guid: 94d3599e160fb6e4296fe22c72e07d02,
         type: 3}
@@ -479,10 +479,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gun
       objectReference: {fileID: 0}
-    - target: {fileID: 1987715720001843743, guid: 94d3599e160fb6e4296fe22c72e07d02,
+    - target: {fileID: 5958706917069699587, guid: 94d3599e160fb6e4296fe22c72e07d02,
         type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      propertyPath: distanceFromOrigin
+      value: 0.38
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94d3599e160fb6e4296fe22c72e07d02, type: 3}

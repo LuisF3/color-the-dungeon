@@ -17,7 +17,7 @@ public class FollowMouse : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.localPosition = new Vector2(distanceFromOrigin, 0);
+        transform.localPosition = new Vector2(distanceFromOrigin, transform.localPosition.y);
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
@@ -26,9 +26,15 @@ public class FollowMouse : MonoBehaviour
         mouseDirection = context.ReadValue<Vector2>();
 
         if (distanceFromOrigin > 0 && mouseDirection.x - Camera.main.pixelWidth / 2 < 0)
+        {
             distanceFromOrigin = -distanceFromOrigin;
+            transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
+        }
         else if (distanceFromOrigin < 0 && mouseDirection.x - Camera.main.pixelWidth / 2 > 0)
+        {
             distanceFromOrigin = -distanceFromOrigin;
+            transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
+        }
 
         mouseDirection = Camera.main.ScreenToWorldPoint(mouseDirection) - transform.position;        
     }

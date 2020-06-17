@@ -180,6 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colored_part: {fileID: 2891593891979389495}
+  defaultColor: {r: 0.54, g: 0.8, b: 0.94, a: 1}
   color: {r: 0, g: 0, b: 0, a: 1}
 --- !u!61 &3588393748889016849
 BoxCollider2D:

@@ -14,7 +14,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Interact",
+                    "name": "Change Cloth Color",
                     "type": "Button",
                     "id": "5d1112b9-86d2-4fdb-8a13-38a36eea7fb1",
                     "expectedControlType": "Button",
@@ -26,6 +26,14 @@
                     "type": "Value",
                     "id": "e96896d8-8d3b-45d3-b6af-d47a38cb435e",
                     "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Change Weapon Color",
+                    "type": "Button",
+                    "id": "76cee6b9-9195-46f2-bb0f-12ecced4e66e",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 }
@@ -93,7 +101,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Interact",
+                    "action": "Change Cloth Color",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -105,6 +113,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "980a7c6a-5383-4719-bf53-2eed82d32e80",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Change Weapon Color",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
