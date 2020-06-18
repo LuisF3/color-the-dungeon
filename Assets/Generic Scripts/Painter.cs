@@ -18,7 +18,6 @@ public class Painter : MonoBehaviour
 
     public void applyColor(Color color)
     {
-        Debug.Log("Applying color " + color);
         if (color == Color.black)
         {
             currentColor = Color.black;
@@ -29,5 +28,7 @@ public class Painter : MonoBehaviour
             currentColor += color;
             colored_part.color = currentColor;
         }
+
+        currentColor = new Color(Mathf.Min(currentColor.r, 1f), Mathf.Min(currentColor.g, 1f), Mathf.Min(currentColor.b, 1f), Mathf.Min(currentColor.a, 1f));
     }
 }
