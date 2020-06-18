@@ -5,7 +5,7 @@ using UnityEngine;
 public class Barrier : MonoBehaviour
 {
     Transform player_transform;
-    ColorManager player_colorManager;
+    Painter player_painter;
     Collider2D collider_2D;
     public SpriteRenderer colored_part;
     public Color color = Color.black;
@@ -17,7 +17,7 @@ public class Barrier : MonoBehaviour
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player_transform = player.transform;
-        player_colorManager = player.GetComponent<ColorManager>();
+        player_painter = player.GetComponent<Painter>();
 
         collider_2D = GetComponent<Collider2D>();
         colored_part.color = color;
@@ -26,7 +26,7 @@ public class Barrier : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((player_transform.position - transform.position).sqrMagnitude < openRange * openRange && player_colorManager.currentColor == color)
+        if ((player_transform.position - transform.position).sqrMagnitude < openRange * openRange && player_painter.currentColor == color)
             open = true;
         else 
             open = false;

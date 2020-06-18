@@ -156,6 +156,7 @@ GameObject:
   - component: {fileID: 3436455485448289514}
   - component: {fileID: 681815943629213}
   - component: {fileID: 1310294287262934472}
+  - component: {fileID: 2878992749731453259}
   - component: {fileID: 8220451909632544166}
   - component: {fileID: 7608049835578055828}
   - component: {fileID: 8309662186376788801}
@@ -306,6 +307,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: e96896d8-8d3b-45d3-b6af-d47a38cb435e
     m_ActionName: Player/Aim[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 76cee6b9-9195-46f2-bb0f-12ecced4e66e
+    m_ActionName: Player/Change Weapon Color[/Keyboard/q]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -338,6 +343,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionPoint: {fileID: 3759798909402680654}
   interactionRange: 5
+--- !u!114 &2878992749731453259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8288049431495857407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1a0fe17b66c2047af5241e9dd6567a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colored_part: {fileID: 902632031318362439}
+  defaultColor: {r: 0.83, g: 0.83, b: 0.83, a: 1}
+  color: {r: 0, g: 0, b: 0, a: 1}
 --- !u!114 &8220451909632544166
 MonoBehaviour:
   m_ObjectHideFlags: 0
