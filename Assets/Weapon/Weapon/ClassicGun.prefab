@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1797601009600575329}
   - component: {fileID: 3004326206028377967}
   - component: {fileID: 8227024734400229113}
-  - component: {fileID: 5958706917069699587}
+  - component: {fileID: 3038296417399068273}
   m_Layer: 10
-  m_Name: Gun
+  m_Name: ClassicGun
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 11
-  m_Sprite: {fileID: -1319066341138814205, guid: 9b03a2978e50864469a87d11c152d1c4,
+  m_Sprite: {fileID: -6413144710133857801, guid: 9b03a2978e50864469a87d11c152d1c4,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colored_part: {fileID: 378015989084212334}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
-  color: {r: 0, g: 0, b: 0, a: 1}
---- !u!114 &5958706917069699587
+  currentColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!114 &3038296417399068273
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,11 +109,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1987715720001843743}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 157e1fbd552f22046b4135b750e63bcf, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e9431ccead34734abeb66adf16e6192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceFromOrigin: 0.5
-  angle: 0
+  bullet: {fileID: 8085680004928711620, guid: 03c06b682a32185428556cd2c581369b, type: 3}
+  damage: 1
+  bulletVelocity: 1
+  magazineCapacity: 10
 --- !u!1 &3836740122917521697
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +186,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 11
-  m_Sprite: {fileID: -6413144710133857801, guid: 9b03a2978e50864469a87d11c152d1c4,
+  m_Sprite: {fileID: -1319066341138814205, guid: 9b03a2978e50864469a87d11c152d1c4,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

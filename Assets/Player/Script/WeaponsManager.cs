@@ -4,25 +4,29 @@ using UnityEngine;
 
 public class WeaponsManager : MonoBehaviour
 {
-    public GameObject weaponsParent;
+    [HideInInspector] public GameObject currentWeapon = null;
+    public float distanceFromPlayer = 0.4f;
+    public Aim aim;
     List<GameObject> weapons = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
     {
-        foreach (Transform child in weaponsParent.transform)
+        foreach (Transform child in transform)
         {
             weapons.Add(child.gameObject);
             child.gameObject.SetActive(false);
         }
 
         if (weapons.Count > 0)
-            weapons[0].SetActive(true);
+            selectWeapon(0);
+
     }
 
-    // Update is called once per frame
-    void Update()
+    void selectWeapon(int i)
     {
-        
+        currentWeapon = weapons[i];
+        currentWeapon.SetActive(true);
+        aim.enabled = true;
     }
 }
