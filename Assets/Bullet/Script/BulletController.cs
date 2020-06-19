@@ -7,6 +7,7 @@ public class BulletController : MonoBehaviour
     Rigidbody2D rb;
     public float collideRadius = 0.1f;
     public float velocity = 1f;
+    public int damage = 1;
     float angle;
     Vector2 direction;
     Collider2D[] hits;
@@ -31,9 +32,7 @@ public class BulletController : MonoBehaviour
             foreach (Collider2D entity in hits)
             {
                 if (LayerMask.LayerToName(entity.gameObject.layer) == "Enemy")
-                {
-                    // damages enemy
-                }
+                    entity.GetComponent<LifeController>().Damage(damage);
                 Destroy(gameObject);
             }
         }
