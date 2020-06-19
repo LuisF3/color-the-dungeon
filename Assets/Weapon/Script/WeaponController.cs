@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class WeaponController : MonoBehaviour
 {
-    Aim aim;
+    WeaponsManager wmanager;
     Painter painter;
     public GameObject bullet;
     public Transform weaponFront;
@@ -16,14 +16,16 @@ public class WeaponController : MonoBehaviour
     private void Start()
     {
         painter = GetComponent<Painter>();
-        aim = transform.parent.GetComponent<Aim>();
+        wmanager = transform.parent.GetComponent<WeaponsManager>();
     }
 
     public void Shoot(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            // Spawn bullet
+            BulletController bcontroller = Instantiate(bullet, weaponFront.position, wmanager.currentWeapon.transform.rotation).GetComponent<BulletController>();
+
+            bcontroller.velocity = bulletVelocity;
         }
     }
 }
