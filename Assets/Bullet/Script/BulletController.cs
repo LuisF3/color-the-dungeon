@@ -25,7 +25,7 @@ public class BulletController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + direction * velocity* Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + direction * velocity * Time.fixedDeltaTime);
         if (hits.Length > 0)
         {
             foreach (Collider2D entity in hits)
