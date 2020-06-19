@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
     Rigidbody2D rb;
+    public Painter painter;
     public float collideRadius = 0.1f;
     public float velocity = 1f;
     public int damage = 1;
@@ -31,7 +32,7 @@ public class BulletController : MonoBehaviour
         {
             foreach (Collider2D entity in hits)
             {
-                if (LayerMask.LayerToName(entity.gameObject.layer) == "Enemy")
+                if (LayerMask.LayerToName(entity.gameObject.layer) == "Enemy" && entity.GetComponent<Painter>().currentColor == painter.currentColor)
                     entity.GetComponent<LifeController>().Damage(damage);
                 Destroy(gameObject);
             }

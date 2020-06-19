@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1792377619923255232}
   - component: {fileID: 3084032675153428214}
+  - component: {fileID: 7652550770494861056}
   - component: {fileID: 5762225818790698929}
   - component: {fileID: 4066127717725991523}
   m_Layer: 0
@@ -83,6 +84,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7652550770494861056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8085680004928711620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1a0fe17b66c2047af5241e9dd6567a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colored_part: {fileID: 3084032675153428214}
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  currentColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!114 &5762225818790698929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,6 +111,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8abdb26566b894f4eb7347508b5be43c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painter: {fileID: 7652550770494861056}
+  collideRadius: 0.1
+  velocity: 1
+  damage: 1
 --- !u!50 &4066127717725991523
 Rigidbody2D:
   serializedVersion: 4

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Painter : MonoBehaviour
 {
     public SpriteRenderer colored_part;
-    public Color defaultColor;
+    public Color defaultColor = Color.black;
     public Color currentColor = Color.black;
 
     private void Start()

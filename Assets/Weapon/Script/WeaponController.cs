@@ -23,9 +23,13 @@ public class WeaponController : MonoBehaviour
     {
         if (context.started)
         {
-            BulletController bcontroller = Instantiate(bullet, weaponFront.position, wmanager.currentWeapon.transform.rotation).GetComponent<BulletController>();
+            GameObject bGameObject = Instantiate(bullet, weaponFront.position, wmanager.currentWeapon.transform.rotation);
+            BulletController bcontroller = bGameObject.GetComponent<BulletController>();
+            Painter bPainter = bGameObject.GetComponent<Painter>();
 
             bcontroller.velocity = bulletVelocity;
+            bcontroller.damage = damage;
+            bPainter.currentColor = painter.currentColor;
         }
     }
 }

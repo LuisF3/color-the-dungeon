@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Fountain
   - Weapon
+  - Wall
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Fountain
   - Weapon
   - Wall
-  - 
+  - Enemy
   - 
   - 
   - 
