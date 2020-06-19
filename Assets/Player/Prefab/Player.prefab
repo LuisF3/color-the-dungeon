@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentWeapon: {fileID: 0}
+  pInteractor: {fileID: 1310294287262934472}
   distanceFromPlayer: 0.4
   aim: {fileID: 7593630678369840601}
 --- !u!114 &7593630678369840601
@@ -441,7 +442,18 @@ MonoBehaviour:
     m_ActionId: e96896d8-8d3b-45d3-b6af-d47a38cb435e
     m_ActionName: Player/Aim[/Mouse/position]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2243157485111524046}
+        m_MethodName: ColorWeapon
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 76cee6b9-9195-46f2-bb0f-12ecced4e66e
     m_ActionName: Player/Change Weapon Color[/Keyboard/q]
   - m_PersistentCalls:

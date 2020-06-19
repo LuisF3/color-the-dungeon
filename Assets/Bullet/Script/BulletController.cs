@@ -5,9 +5,11 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
     Rigidbody2D rb;
+    public float collideRadius = 0.1f;
     public float velocity = 1f;
     float angle;
     Vector2 direction;
+    Collider2D[] hits;
 
     private void Start()
     {
@@ -18,10 +20,22 @@ public class BulletController : MonoBehaviour
     private void Update()
     {
         direction = (new Quaternion(0, 0, angle, 1) * transform.right * -1).normalized;
+        hits = Physics2D.OverlapCircleAll(transform.position, collideRadius, LayerMask.GetMask("Enemy", "Wall"));
     }
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + direction * velocity* Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + direction * velocity * Time.fixedDeltaTime);
+        if (hits.Length > 0)
+        {
+            foreach (Collider2D entity in hits)
+            {
+                if (LayerMask.LayerToName(entity.gameObject.layer) == "Enemy")
+                {
+                    // damages enemy
+                }
+                Destroy(gameObject);
+            }
+        }
     }
 }
