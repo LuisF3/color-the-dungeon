@@ -5,10 +5,10 @@ using UnityEngine.InputSystem;
 
 public class WeaponController : MonoBehaviour
 {
-    Aim aim;
+    WeaponsManager wmanager;
     Painter painter;
     public GameObject bullet;
-    public Transform bulletSpawnLocation;
+    public Transform weaponFront;
     [SerializeField] int damage = 1;
     [SerializeField] float bulletVelocity = 1f;
     [SerializeField] int magazineCapacity = 10;
@@ -16,17 +16,16 @@ public class WeaponController : MonoBehaviour
     private void Start()
     {
         painter = GetComponent<Painter>();
-        aim = transform.parent.GetComponent<Aim>();
+        wmanager = transform.parent.GetComponent<WeaponsManager>();
     }
 
     public void Shoot(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            Vector2 locationRelativeToPlayer = aim.GetLocation();
-            BulletController bController = Instantiate(bullet, bulletSpawnLocation.position, aim.GetRotation()).GetComponent<BulletController>();
+            BulletController bcontroller = Instantiate(bullet, weaponFront.position, wmanager.currentWeapon.transform.rotation).GetComponent<BulletController>();
 
-            bController.velocity = bulletVelocity;
+            bcontroller.velocity = bulletVelocity;
         }
     }
 }
