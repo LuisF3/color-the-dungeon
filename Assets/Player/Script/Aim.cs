@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class Aim : MonoBehaviour
 {
     WeaponsManager wmanager;
-    public WeaponController currentWeapon;
+    WeaponController currentWeapon;
     float angle = 0;
     Vector3 mousePosition = Vector3.zero;
     bool facingRight = true;
