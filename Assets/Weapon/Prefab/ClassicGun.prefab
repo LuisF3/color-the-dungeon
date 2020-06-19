@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2977180721528695181}
   m_Layer: 10
-  m_Name: BulletSpawnLocation
+  m_Name: WeaponFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 465271440494196784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.24, y: 0.1, z: 0}
+  m_LocalPosition: {x: 0.3, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1797601009600575329}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 8085680004928711620, guid: 03c06b682a32185428556cd2c581369b, type: 3}
-  bulletSpawnLocation: {fileID: 2977180721528695181}
+  weaponFront: {fileID: 2977180721528695181}
   damage: 1
   bulletVelocity: 10
   magazineCapacity: 10

@@ -8,7 +8,7 @@ public class WeaponController : MonoBehaviour
     Aim aim;
     Painter painter;
     public GameObject bullet;
-    public Transform bulletSpawnLocation;
+    public Transform weaponFront;
     [SerializeField] int damage = 1;
     [SerializeField] float bulletVelocity = 1f;
     [SerializeField] int magazineCapacity = 10;
@@ -23,10 +23,7 @@ public class WeaponController : MonoBehaviour
     {
         if (context.started)
         {
-            Vector2 locationRelativeToPlayer = aim.GetLocation();
-            BulletController bController = Instantiate(bullet, bulletSpawnLocation.position, aim.GetRotation()).GetComponent<BulletController>();
-
-            bController.velocity = bulletVelocity;
+            // Spawn bullet
         }
     }
 }
